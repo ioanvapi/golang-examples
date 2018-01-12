@@ -9,21 +9,21 @@
 
 I like this approach because the handler function we have to implement has a similar signature as the java function in a java runtime.
 For below signature, json.RawMessage is just []byte and you can return any type.
-```
+```go
 func Handle(evt json.RawMessage, ctx *runtime.Context) (interface{}, error) {
     // todo
 }
 ```
 
 Also, for simple situations you can use:
-```
+```go
 func Handle(evt String, ctx *runtime.Context) (String, error) {
     // todo
 }
 ```
 
 Or, you can define your own types. The framework will unmarshal and marshal the data for you.
-```
+```golang
 type Proba struct {
     Name string `json:"name"`
     Age  int    `json:"age"`
