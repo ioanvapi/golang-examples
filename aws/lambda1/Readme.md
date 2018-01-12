@@ -5,7 +5,7 @@ Also, you need the nodejs handler file that will spawn a new process for go buil
 The arguments passed to nodejs handler will be passed to the go code as program arguments.
 We can read them from os.Args.
 
-```
+```javascript
 var child_process = require('child_process');
 
 exports.handler = function(event, context) {
